@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.1.8
+
+* Deprecated `handlePushMessage`.
+
+## 1.1.7
+
+* Implemented method `setAuthTokens`.
+
+## 1.1.6
+
+* Implemented method `setUserJwt`.
+
 ## 1.1.5
 
 * Set user_hash, user_id, email in intercomSettings.

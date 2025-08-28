@@ -1,5 +1,58 @@
 # Changelog
 
+## 9.4.6
+
+* Bump Intercom iOS SDK version to [19.1.2](https://github.com/intercom/intercom-ios/releases/tag/19.1.2)
+* Bump Intercom Android SDK version to [17.1.0](https://github.com/intercom/intercom-android/releases/tag/17.1.0)
+
+## 9.4.5
+
+* Bump Intercom Android SDK version to [17.0.4](https://github.com/intercom/intercom-android/releases/tag/17.0.4)
+
+## 9.4.4
+
+* Bump Intercom iOS SDK version to [19.1.1](https://github.com/intercom/intercom-ios/releases/tag/19.1.1)
+
+## 9.4.3
+
+* Bump Intercom Android SDK version to [17.0.3](https://github.com/intercom/intercom-android/releases/tag/17.0.3)
+
+## 9.4.2
+
+* Bump Intercom iOS SDK version to [19.1.0](https://github.com/intercom/intercom-ios/releases/tag/19.1.0)
+
+## 9.4.1
+
+* Bump Intercom Android SDK version to [17.0.2](https://github.com/intercom/intercom-android/releases/tag/17.0.2)
+
+## 9.4.0
+
+* Bump Intercom iOS SDK version to 19.0.1 (includes dark mode beta)
+* Bump Intercom Android SDK version to 17.0.0 (includes dark mode beta)
+
+## 9.3.3
+
+* Bump Intercom iOS SDK version to 18.8.1
+
+## 9.3.2
+
+* Added API `setAuthTokens`.
+* Bump Intercom Android SDK version to 16.3.0
+* Bump Intercom iOS SDK version to 18.8.0
+* Updated gradle and kotlin version
+* Deprecated `handlePushMessage`
+
+## 9.3.1
+
+* Added API `setUserJwt`.
+* Bump Intercom Android SDK version to 16.2.1
+
+## 9.3.0
+
+* Bump Intercom Android SDK version to 16.2.0
+* Bump Intercom iOS SDK version to 18.7.3
+* This version requires `compileSdk` version to be at least 35.
+
 ## 9.2.11
 
 * Post event result on main thread in Android. ([#518](https://github.com/v3rm0n/intercom_flutter/pull/518))

@@ -174,6 +174,8 @@ class MethodChannelIntercomFlutter extends IntercomFlutterPlatform {
     await _channel.invokeMethod('sendTokenToIntercom', {'token': token});
   }
 
+  @Deprecated(
+      "Calling this API is no longer required. Intercom will directly open the chat screen when a push notification is clicked.")
   @override
   Future<void> handlePushMessage() async {
     await _channel.invokeMethod('handlePushMessage');
@@ -251,6 +253,16 @@ class MethodChannelIntercomFlutter extends IntercomFlutterPlatform {
     var attributes = Map<String, dynamic>.from(
         await _channel.invokeMethod<Map>('fetchLoggedInUserAttributes') ?? {});
     return attributes;
+  }
+
+  @override
+  Future<void> setUserJwt(String jwt) async {
+    await _channel.invokeMethod('setUserJwt', {'jwt': jwt});
+  }
+
+  @override
+  Future<void> setAuthTokens(Map<String, String> tokens) async {
+    await _channel.invokeMethod('setAuthTokens', {'tokens': tokens});
   }
 
   /// Convert the [PlatformException] details to [IntercomError].

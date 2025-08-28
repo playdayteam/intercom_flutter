@@ -283,4 +283,18 @@ void main() {
     await Intercom.instance.displayHome();
     expectMethodCall('displayHome');
   });
+
+  test('setUserJwt', () {
+    Intercom.instance.setUserJwt('test');
+    expectMethodCall('setUserJwt', arguments: {
+      'jwt': 'test',
+    });
+  });
+
+  test('setAuthTokens', () {
+    Intercom.instance.setAuthTokens({'security_token': 'test'});
+    expectMethodCall('setAuthTokens', arguments: {
+      'tokens': {'security_token': 'test'},
+    });
+  });
 }

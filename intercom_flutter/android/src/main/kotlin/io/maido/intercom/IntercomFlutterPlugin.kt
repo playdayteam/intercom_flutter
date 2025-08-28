@@ -269,6 +269,35 @@ class IntercomFlutterPlugin : FlutterPlugin, MethodCallHandler, EventChannel.Str
         }
         result.success(map)
       }
+      "setUserJwt" -> {
+        val jwt = call.argument<String>("jwt")
+        if (jwt != null) {
+          Intercom.client().setUserJwt(jwt)
+          result.success("Jwt added")
+        }
+      }
+      "setAuthTokens" -> {
+        val tokens = call.argument<Map<String, String>>("tokens")
+        if (!tokens.isNullOrEmpty()) {
+          val tokenList: List<AuthToken> = tokens.map { (key, value) ->
+            AuthToken(key, value)
+          }
+          Intercom.client().setAuthTokens(tokenList, intercomStatusCallback = object : IntercomStatusCallback {
+            override fun onFailure(intercomError: IntercomError) {
+              // Handle failure
+              result.error(intercomError.errorCode.toString(), intercomError.errorMessage, getIntercomError(
+                errorCode = intercomError.errorCode,
+                errorMessage = intercomError.errorMessage,
+              ))
+            }
+
+            override fun onSuccess() {
+              // Handle success
+              result.success("Auth tokens added")
+            }
+          })
+        }
+      }
       else -> result.notImplemented()
     }
   }
