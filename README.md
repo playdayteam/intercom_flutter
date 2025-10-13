@@ -35,7 +35,7 @@ git fetch upstream2.
 git log --oneline --graph upstream/master ^master
 ```
 
-2. Создание ветки и перенос коммитов
+1. Создание ветки и перенос коммитов
 
 ```bash
 # 1. Убедитесь, что вы на актуальной версии master
@@ -49,4 +49,4 @@ git checkout -b version-x.x.x
 
 ```
 
-3. Открываем пул в наш master
+1. Открываем пул в наш master
