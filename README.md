@@ -1,12 +1,21 @@
-# intercom_flutter
 
-Seamless integration of Intercom for your Flutter applications.
+# Корпоративный форк `intercom_flutter`
 
-This Flutter package provides a simple and efficient way to integrate Intercom functionality into your Flutter applications. It offers a comprehensive set of features to enhance your app's customer support capabilities.
+**Внимание:** Этот репозиторий является внутренним форком библиотеки [`v3rm0n/intercom_flutter`](https://github.com/v3rm0n/intercom_flutter).
 
-## Support
+Форк для внесения кастомных изменений и исправлений, необходимых для стабильной работы в наших проектах. Основной репозиторий (`origin`) — это канонический источник данной зависимости для мобильной команды.
 
-If you find this package helpful, you can support the development by:
+---
 
-- [Buy Me A Coffee](https://buymeacoffee.com/deepakdroid)
-- [PayPal](https://paypal.me/deepakdroid)
+## Управление и обновление из Upstream
+
+Чтобы поддерживать наш форк в актуальном состоянии, необходимо периодически синхронизировать его с "родительским" репозиторием, который мы называем `upstream`.
+
+### Единоразовая настройка
+
+Каждый разработчик, который будет заниматься обновлением этого форка, должен выполнить следующую команду в своем локальном клоне **один раз**:
+
+```bash
+# Добавляем ссылку на "родительский" репозиторий под именем 'upstream'
+git remote add upstream git@github.com:v3rm0n/intercom_flutter.git
+```
