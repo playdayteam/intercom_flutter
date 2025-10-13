@@ -1,4 +1,3 @@
-
 # Корпоративный форк `intercom_flutter`
 
 **Внимание:** Этот репозиторий является внутренним форком библиотеки [`v3rm0n/intercom_flutter`](https://github.com/v3rm0n/intercom_flutter).
@@ -19,3 +18,36 @@
 # Добавляем ссылку на "родительский" репозиторий под именем 'upstream'
 git remote add upstream git@github.com:v3rm0n/intercom_flutter.git
 ```
+
+обновляем upstream - git fetch upstream
+
+---
+
+Процесс обновления через Cherry-Pick
+
+1. Анализ обновлений
+
+```bash
+1. Загрузить свежие данные из upstream
+git fetch upstream2. 
+
+2. Посмотреть список новых коммитов
+git log --oneline --graph upstream/master ^master
+```
+
+2. Создание ветки и перенос коммитов
+
+```bash
+# 1. Убедитесь, что вы на актуальной версии master
+git checkout master
+git pull origin master
+
+# 2. Создаем новую ветку для обновления. В названии версия до которой обновляем
+git checkout -b version-x.x.x
+
+# 3. Перенесим нужные коммиты (от старых к новым)
+git cherry-pick <commit_hash_1>
+git cherry-pick <commit_hash_2>
+```
+
+3. Открываем пул в наш master
