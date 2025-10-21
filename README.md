@@ -23,7 +23,11 @@ git remote add upstream git@github.com:v3rm0n/intercom_flutter.git
 
 ---
 
+<<<<<<< HEAD
+Процесс обновления
+=======
 Процесс обновления через Cherry-Pick
+>>>>>>> origin/master
 
 1. Анализ обновлений
 
@@ -45,9 +49,8 @@ git pull origin master
 # 2. Создаем новую ветку для обновления. В названии версия до которой обновляем
 git checkout -b version-x.x.x
 
-# 3. Перенесим нужные коммиты (от старых к новым)
-git cherry-pick <commit_hash_1>
-git cherry-pick <commit_hash_2>
+# 3. Перенесим новые комиты из upstream/master через rebase или merge в нашу ветку
+
 ```
 
 3. Открываем пул в наш master

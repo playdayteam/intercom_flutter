@@ -1,5 +1,26 @@
 # Changelog
 
+## 9.4.11
+
+* Bump Intercom Android SDK version to [17.3.0](https://github.com/intercom/intercom-android/releases/tag/17.3.0)
+
+## 9.4.10
+
+* Bump Intercom Android SDK version to [17.2.0](https://github.com/intercom/intercom-android/releases/tag/17.2.0)
+
+## 9.4.9
+
+* Bump Intercom iOS SDK version to [19.2.1](https://github.com/intercom/intercom-ios/releases/tag/19.2.1)
+
+## 9.4.8
+
+* Bump `intercom_flutter_web` to `1.1.9`
+
+## 9.4.7
+
+* Bump Intercom iOS SDK version to [19.2.0](https://github.com/intercom/intercom-ios/releases/tag/19.2.0)
+* Bump Intercom Android SDK version to [17.1.1](https://github.com/intercom/intercom-android/releases/tag/17.1.1)
+
 ## 9.4.6
 
 * Bump Intercom iOS SDK version to [19.1.2](https://github.com/intercom/intercom-ios/releases/tag/19.1.2)
