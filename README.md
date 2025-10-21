@@ -23,7 +23,11 @@ git remote add upstream git@github.com:v3rm0n/intercom_flutter.git
 
 ---
 
+<<<<<<< HEAD
 Процесс обновления
+=======
+Процесс обновления через Cherry-Pick
+>>>>>>> origin/master
 
 1. Анализ обновлений
 
