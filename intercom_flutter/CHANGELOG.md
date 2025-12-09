@@ -1,5 +1,41 @@
 # Changelog
 
+## 9.4.20
+
+* Bump Intercom iOS SDK version to [19.4.0](https://github.com/intercom/intercom-ios/releases/tag/19.4.0)
+
+## 9.4.19
+
+* Bump `intercom_flutter_web` to `1.1.11`
+
+## 9.4.18
+
+* Bump Intercom iOS SDK version to [19.3.4](https://github.com/intercom/intercom-ios/releases/tag/19.3.4)
+
+## 9.4.17
+
+* Bump Intercom iOS SDK version to [19.3.3](https://github.com/intercom/intercom-ios/releases/tag/19.3.3)
+
+## 9.4.16
+
+* Bump Intercom Android SDK version to [17.3.1](https://github.com/intercom/intercom-android/releases/tag/17.3.1)
+
+## 9.4.15
+
+* Added API `setThemeMode`.
+
+## 9.4.14
+
+* Bump Intercom iOS SDK version to [19.3.2](https://github.com/intercom/intercom-ios/releases/tag/19.3.2)
+
+## 9.4.13
+
+* Bump Intercom iOS SDK version to [19.3.1](https://github.com/intercom/intercom-ios/releases/tag/19.3.1)
+
+## 9.4.12
+
+* Bump Intercom iOS SDK version to [19.3.0](https://github.com/intercom/intercom-ios/releases/tag/19.3.0)
+
 ## 9.4.11
 
 * Bump Intercom Android SDK version to [17.3.0](https://github.com/intercom/intercom-android/releases/tag/17.3.0)
