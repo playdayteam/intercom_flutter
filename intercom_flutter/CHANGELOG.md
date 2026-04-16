@@ -1,5 +1,41 @@
 # Changelog
 
+## 9.6.3
+
+* Bump Intercom Android SDK version to [18.0.1](https://github.com/intercom/intercom-android/releases/tag/18.0.1)
+
+## 9.6.2
+
+* Removed deprecated `handlePushMessage` API (removed from native Intercom SDK)
+* Added `getWindowDidHideStream` to listen for when the Intercom window is hidden (iOS only).
+
+## 9.6.1
+
+* Bump Intercom iOS SDK version to [19.5.6](https://github.com/intercom/intercom-ios/releases/tag/19.5.6)
+
+## 9.6.0
+
+* Bump Intercom Android SDK version to [18.0.0](https://github.com/intercom/intercom-android/releases/tag/18.0.0)
+* **BREAKING**: The minimum Android SDK `minSdk` version is now 23
+* **BREAKING**: The target/compile Android SDK version is now 36
+
+## 9.5.6
+
+* Bump Intercom iOS SDK version to [19.5.5](https://github.com/intercom/intercom-ios/releases/tag/19.5.5)
+
+## 9.5.5
+
+* Bump Intercom Android SDK version to [17.4.7](https://github.com/intercom/intercom-android/releases/tag/17.4.7)
+* Bump Intercom iOS SDK version to [19.5.4](https://github.com/intercom/intercom-ios/releases/tag/19.5.4)
+
+## 9.5.4
+
+* Bump Intercom iOS SDK version to [19.5.3](https://github.com/intercom/intercom-ios/releases/tag/19.5.3)
+
+## 9.5.3
+
+* Bump Intercom Android SDK version to [17.4.6](https://github.com/intercom/intercom-android/releases/tag/17.4.6)
+
 ## 9.5.2
 
 * Bump Intercom Android SDK version to [17.4.5](https://github.com/intercom/intercom-android/releases/tag/17.4.5)

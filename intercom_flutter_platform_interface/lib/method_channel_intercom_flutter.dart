@@ -5,6 +5,8 @@ import 'package:intercom_flutter_platform_interface/intercom_status_callback.dar
 
 const MethodChannel _channel = MethodChannel('maido.io/intercom');
 const EventChannel _unreadChannel = EventChannel('maido.io/intercom/unread');
+const EventChannel _windowDidHideChannel =
+    EventChannel('maido.io/intercom/windowDidHide');
 
 /// An implementation of [IntercomFlutterPlatform] that uses method channels.
 class MethodChannelIntercomFlutter extends IntercomFlutterPlatform {
@@ -24,6 +26,11 @@ class MethodChannelIntercomFlutter extends IntercomFlutterPlatform {
   @override
   Stream<dynamic> getUnreadStream() {
     return _unreadChannel.receiveBroadcastStream();
+  }
+
+  @override
+  Stream<dynamic> getWindowDidHideStream() {
+    return _windowDidHideChannel.receiveBroadcastStream();
   }
 
   @override
@@ -173,13 +180,6 @@ class MethodChannelIntercomFlutter extends IntercomFlutterPlatform {
     assert(token.isNotEmpty);
     print("Start sending token to Intercom");
     await _channel.invokeMethod('sendTokenToIntercom', {'token': token});
-  }
-
-  @Deprecated(
-      "Calling this API is no longer required. Intercom will directly open the chat screen when a push notification is clicked.")
-  @override
-  Future<void> handlePushMessage() async {
-    await _channel.invokeMethod('handlePushMessage');
   }
 
   @override

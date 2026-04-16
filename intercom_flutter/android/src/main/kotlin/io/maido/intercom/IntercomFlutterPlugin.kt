@@ -14,6 +14,12 @@ import io.intercom.android.sdk.identity.Registration
 import io.intercom.android.sdk.push.IntercomPushClient
 import io.intercom.android.sdk.ui.theme.ThemeMode
 
+// No-op stream handler for windowDidHide event since it's only supported on iOS.
+class WindowDidHideStreamHandler : EventChannel.StreamHandler {
+  override fun onListen(arguments: Any?, events: EventChannel.EventSink?) {}
+  override fun onCancel(arguments: Any?) {}
+}
+
 class IntercomFlutterPlugin : FlutterPlugin, MethodCallHandler, EventChannel.StreamHandler, ActivityAware {
   companion object {
     @JvmStatic
@@ -33,6 +39,8 @@ class IntercomFlutterPlugin : FlutterPlugin, MethodCallHandler, EventChannel.Str
     channel.setMethodCallHandler(IntercomFlutterPlugin())
     val unreadEventChannel = EventChannel(flutterPluginBinding.binaryMessenger, "maido.io/intercom/unread")
     unreadEventChannel.setStreamHandler(IntercomFlutterPlugin())
+    val windowDidHideEventChannel = EventChannel(flutterPluginBinding.binaryMessenger, "maido.io/intercom/windowDidHide")
+    windowDidHideEventChannel.setStreamHandler(WindowDidHideStreamHandler())
     application = flutterPluginBinding.applicationContext as Application
   }
 
@@ -201,10 +209,6 @@ class IntercomFlutterPlugin : FlutterPlugin, MethodCallHandler, EventChannel.Str
 
           result.success("Token sent to Intercom")
         }
-      }
-      "handlePushMessage" -> {
-        Intercom.client().handlePushMessage()
-        result.success("Push message handled")
       }
       "displayMessageComposer" -> {
         if (call.hasArgument("message")) {

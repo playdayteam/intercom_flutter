@@ -49,6 +49,15 @@ class Intercom {
     return IntercomFlutterPlatform.instance.getUnreadStream();
   }
 
+  /// You can listen for when the Intercom window is hidden.
+  ///
+  /// This stream emits when the Intercom window (messenger, help center, etc.) is closed.
+  /// This allows developers to perform certain actions in their app when the Intercom window is closed.
+  /// Only available on iOS.
+  Stream<dynamic> getWindowDidHideStream() {
+    return IntercomFlutterPlatform.instance.getWindowDidHideStream();
+  }
+
   /// This method allows you to set a fixed bottom padding for in app messages and the launcher.
   ///
   /// It is useful if your app has a tab bar or similar UI at the bottom of your window.
@@ -208,16 +217,6 @@ class Intercom {
   /// For the iOS, this [token] must be a APNS token.
   Future<void> sendTokenToIntercom(String token) {
     return IntercomFlutterPlatform.instance.sendTokenToIntercom(token);
-  }
-
-  /// When a user taps on a push notification Intercom hold onto data
-  /// such as the URI in your message or the conversation to open.
-  ///
-  /// When you want Intercom to act on that data, use this method.
-  @Deprecated(
-      "Calling this API is no longer required. Intercom will directly open the chat screen when a push notification is clicked.")
-  Future<void> handlePushMessage() {
-    return IntercomFlutterPlatform.instance.handlePushMessage();
   }
 
   /// To open the Intercom messenger to the composer screen with [message]

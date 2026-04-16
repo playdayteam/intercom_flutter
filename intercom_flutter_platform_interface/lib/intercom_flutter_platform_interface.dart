@@ -46,6 +46,16 @@ abstract class IntercomFlutterPlatform extends PlatformInterface {
     throw UnimplementedError('getUnreadStream() has not been implemented.');
   }
 
+  /// You can listen for when the Intercom window is hidden.
+  ///
+  /// This stream emits when the Intercom window (messenger, help center, etc.) is closed.
+  /// This allows developers to perform certain actions in their app when the Intercom window is closed.
+  /// Only available on iOS.
+  Stream<dynamic> getWindowDidHideStream() {
+    throw UnimplementedError(
+        'getWindowDidHideStream() has not been implemented.');
+  }
+
   /// To make sure that conversations between you and your users are kept private
   /// and that one user can't impersonate another then you need you need to setup
   /// the identity verification.
@@ -187,16 +197,6 @@ abstract class IntercomFlutterPlatform extends PlatformInterface {
   /// For the iOS, this [token] must be a APNS token.
   Future<void> sendTokenToIntercom(String token) {
     throw UnimplementedError('sendTokenToIntercom() has not been implemented.');
-  }
-
-  /// When a user taps on a push notification Intercom hold onto data
-  /// such as the URI in your message or the conversation to open.
-  ///
-  /// When you want Intercom to act on that data, use this method.
-  @Deprecated(
-      "Calling this API is no longer required. Intercom will directly open the chat screen when a push notification is clicked.")
-  Future<void> handlePushMessage() {
-    throw UnimplementedError('handlePushMessage() has not been implemented.');
   }
 
   /// To open the Intercom messenger to the composer screen with [message]

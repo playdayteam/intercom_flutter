@@ -5,10 +5,10 @@
 
 Flutter wrapper for Intercom [Android](https://github.com/intercom/intercom-android), [iOS](https://github.com/intercom/intercom-ios), and [Web](https://developers.intercom.com/installing-intercom/docs/basic-javascript) projects.
 
-- Uses Intercom Android SDK Version `17.4.5`.
-- The minimum Android SDK `minSdk` required is 21.
-- The compile Android SDK `compileSdk` required is 35.
-- Uses Intercom iOS SDK Version `19.5.2`.
+- Uses Intercom Android SDK Version `18.0.1`.
+- The minimum Android SDK `minSdk` required is 23.
+- The compile Android SDK `compileSdk` required is 36.
+- Uses Intercom iOS SDK Version `19.5.6`.
 - The minimum iOS target version required is 15.
 - The Xcode version required is 15.
 
@@ -144,11 +144,11 @@ But you can pre-define some Intercom settings, if you want (optional).
 - [ ] unreadConversationCount
 - [ ] setInAppMessagesVisibility
 - [ ] sendTokenToIntercom
-- [ ] handlePushMessage
 - [ ] isIntercomPush
 - [ ] handlePush
 - [ ] displayCarousel
 - [ ] displayHelpCenterCollections
+- [ ] getWindowDidHideStream
 
 ## Using Intercom keys with `--dart-define`
 
@@ -217,12 +217,3 @@ If you find this package helpful, you can support the development by:
 
 - [Buy Me A Coffee](https://buymeacoffee.com/deepakdroid)
 - [PayPal](https://paypal.me/deepakdroid)
-
-## Sponsored: Alternative Solutions
-
-### Feeddo
-A customer support and communication platform for Flutter mobile apps. Provides AI-powered in-app support that answers users from your uploaded knowledge, along with bug reporting and feature request tracking.
-- Website: https://feeddo.dev
-- pub.dev: https://pub.dev/packages/feeddo_flutter
-
-_Note: This is a sponsored listing and does not imply endorsement._
