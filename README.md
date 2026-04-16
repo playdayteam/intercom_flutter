@@ -23,7 +23,7 @@ git remote add upstream git@github.com:v3rm0n/intercom_flutter.git
 
 ---
 
-Процесс обновления
+Процесс обновления через Cherry-Pick
 
 1. Анализ обновлений
 
@@ -35,7 +35,7 @@ git fetch upstream2.
 git log --oneline --graph upstream/master ^master
 ```
 
-1. Создание ветки и перенос коммитов
+2. Создание ветки и перенос коммитов
 
 ```bash
 # 1. Убедитесь, что вы на актуальной версии master
@@ -49,4 +49,4 @@ git checkout -b version-x.x.x
 
 ```
 
-1. Открываем пул в наш master
+3. Открываем пул в наш master
