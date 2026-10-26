@@ -1,5 +1,48 @@
 # Changelog
 
+## 9.6.33
+
+* Bump Intercom iOS SDK version to [19.9.1](https://github.com/intercom/intercom-ios/releases/tag/19.9.1)
+
+## 9.6.32
+
+* Bump Intercom Android SDK version to [18.10.0](https://github.com/intercom/intercom-android/releases/tag/18.10.0)
+* Bump Intercom iOS SDK version to [19.9.0](https://github.com/intercom/intercom-ios/releases/tag/19.9.0)
+* Added API `setUserJwtProvider` so the SDK can request a fresh user JWT when the current one expires. Not supported on web.
+* Added API `removeUserJwtProvider`. Not supported on web.
+* Updated dependency `intercom_flutter_platform_interface: ^2.0.9`
+* Updated dependency `intercom_flutter_web: ^1.1.14`
+
+## 9.6.31
+
+* Bump Intercom Android SDK version to [18.9.6](https://github.com/intercom/intercom-android/releases/tag/18.9.6)
+* Bump Intercom iOS SDK version to [19.8.4](https://github.com/intercom/intercom-ios/releases/tag/19.8.4)
+
+## 9.6.30
+
+* Bump Intercom Android SDK version to [18.9.5](https://github.com/intercom/intercom-android/releases/tag/18.9.5)
+
+## 9.6.29
+
+* Bump Intercom iOS SDK version to [19.8.3](https://github.com/intercom/intercom-ios/releases/tag/19.8.3)
+
+## 9.6.28
+
+* Bump Intercom Android SDK version to [18.9.4](https://github.com/intercom/intercom-android/releases/tag/18.9.4)
+
+## 9.6.27
+
+* Bump Intercom iOS SDK version to [19.8.2](https://github.com/intercom/intercom-ios/releases/tag/19.8.2)
+
+## 9.6.26
+
+* Bump Intercom Android SDK version to [18.9.3](https://github.com/intercom/intercom-android/releases/tag/18.9.3)
+* Bump Intercom iOS SDK version to [19.8.1](https://github.com/intercom/intercom-ios/releases/tag/19.8.1)
+
+## 9.6.25
+
+* Android: apply the Kotlin Gradle Plugin only when AGP built-in Kotlin is not active.
+
 ## 9.6.24
 
 * Bump Intercom Android SDK version to [18.9.1](https://github.com/intercom/intercom-android/releases/tag/18.9.1)
